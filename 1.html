@@ -1,0 +1,43 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<script type="text/javascript">
+        function setCookie(key, value) {
+            var expires = new Date();
+            expires.setTime(expires.getTime() + (1 * 24 * 60 * 60 * 1000));
+            document.cookie = key + '=' + value + ';expires=' + expires.toUTCString();
+        }
+
+        function getCookie(key) {
+            var keyValue = document.cookie.match('(^|;) ?' + key + '=([^;]*)(;|$)');
+            return keyValue ? keyValue[2] : null;
+        }
+
+
+setCookie('test','1');
+
+
+
+
+$("body,html").mouseout(function(event) {
+	//event.preventDefault();
+	a=getCookie('test');
+	console.log(a);
+	if (a==1) {
+	alert("hello");
+	setCookie('test','2');
+	}
+	if (a==2) {
+	alert("hello2");
+	setCookie('test','3');
+	}
+
+		
+
+
+});			
+ 
+
+</script>
+<body style="width: 100%;height: 100vh;"></body>
+
+
