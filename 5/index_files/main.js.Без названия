@@ -1,0 +1,25 @@
+$(document).ready(function ($) {
+	$('.for-event').on('touchend, click',function(e){
+		e.preventDefault();
+		var el = $(this).attr('data-href');
+		$('html, body').animate({
+			scrollTop: $(el).offset().top - 50}, 5000);
+		return false;
+	});
+
+	$('.reviews-list').slick({
+		infinite: true,
+		arrows: false,
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		autoplay: true,
+		autoplaySpeed: 3000
+	});
+});
+
+
+
+
+
+
+

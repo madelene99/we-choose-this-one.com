@@ -1,0 +1,87 @@
+$(document).ready(function () {
+   // $('.bxslider').bxSlider();
+});
+//document.getElementById('check').onkeypress = function (e) {
+//    return !(/[А-Яа-яA-Za-z ]/.test(String.fromCharCode(e.charCode)));
+//};
+var $button = $('.js-button'),
+    $popUp = $('.js-popup'),
+    $popUpContent = $popUp.find('.js-popup__content');
+
+function showPopUp() {
+    $popUp.show();
+}
+function hidePopUp() {
+    $popUp.hide();
+}
+
+$button.on('click', showPopUp);
+$popUp.on('click', hidePopUp);
+$popUpContent.on('click', function (ev) {
+    ev.stopPropagation();
+});
+
+
+//validate
+
+/*$('.js-input').keydown(function(event) {
+ // Разрешаем: backspace, delete, tab и escape
+ if ( event.keyCode == 46 || event.keyCode == 8 || event.keyCode == 9 || event.keyCode == 27 ||
+ // Разрешаем: Ctrl+A
+ (event.keyCode == 65 && event.ctrlKey === true) ||
+ // Разрешаем: home, end, влево, вправо
+ (event.keyCode >= 35 && event.keyCode <= 39)) {
+ // Ничего не делаем
+ return;
+ }
+ else {
+ // Обеждаемся, что это цифра, и останавливаем событие keypress
+ if ((event.keyCode < 48 || event.keyCode > 57) && (event.keyCode < 96 || event.keyCode > 105 )) {
+ event.preventDefault();
+ }
+ }
+ });*/
+
+//
+//$('.js-input').blur(function(){
+
+//var a = $('.formula__input-field').val();
+//    b = $('.formula__result');
+//
+//     parseInt(a);
+//    c = a + 7;
+//console.log('b = ' + b + '<br/>');
+//console.log('c = ' + c);
+
+/*var $numberInput = $('.js-input'),
+ $numberOutput = $('.js-output');
+
+ $numberInput.on('input', function(ev){
+ var inputValue = $numberInput.val(); // берем значение из источника данных
+ if (inputValue === ''){ // если значение пусто то и результат пуст
+ return $numberOutput.val(''); // Нечего не делаем
+ }
+
+ if (!(/^[0-9]*$/g).test(inputValue)){ // если значение из данных НЕ начинаеться с цыфер любого количества и заканчивается то это не цыфры
+ $numberOutput.val(''); // нечего не считаем
+ $numberInput.css({borderColor: 'red', border: '2px'}); // Подсвечиваем ошибку
+ return false; // Нечего не делаем
+ } else{
+ $numberInput.css({borderColor: 'inherit'}); // Если цыфры то убераем ошибку
+ }
+ $numberOutput.val(7 + (Number(inputValue))); // всовуем подсчет цыфра + значение приведенное к цыфре
+ });*/
+
+
+//var userValue = parseInt($('.js-input').val()) + 7;
+//
+//if (userValue = false){
+//    $('.js-output').val('');
+//}
+//else{
+//    $('.js-output').val(userValue);
+//}
+//
+//console.log(userValue)
+
+//});
